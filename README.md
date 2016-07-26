@@ -106,6 +106,8 @@ $ pip install -r requirements.txt
 
 After local env ready, we can deploy our code to Lambda service. There is a sample Makefile shipped inside, which can build deployment package and upload to AWS with cli tool. Before using this, please follow [this guide](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) to setup your local AWS cli tool, also you need to create and configure Lambda function from Amazon web UI, then update the function name in Makefile. After those done, you can use `make` command to deploy Lambda functions.
 
+**NOTICE**: Currently the Makefile only deploy google call back function, for the other functions, since there are single-file project, please copy file content to Lambda editor directly.
+
 > NOTICE: This Makefile doesn't configure ApiGateway, please configure is manually with instructions above.
 
 
@@ -114,6 +116,7 @@ After function deployed, you can try using those functions by accessing the Goog
 
 ## Next step
 
+* Makefile supports multi function deployment
 * Support more OpenID services providers.
 * API for associating user email and SNS accounts.
 * API for removing SNS account from user email.
