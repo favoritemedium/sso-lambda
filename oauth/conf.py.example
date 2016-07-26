@@ -1,0 +1,9 @@
+google_conf = {
+    'client_id': '325209190747-qnvojeo9ooqueefdvpjddujnt3c1jbpf.apps.googleusercontent.com',
+    'client_secret': 'xlX34G78VH8l7ZX3EHjyWVxp',
+    'token_api': 'https://accounts.google.com/o/oauth2/token',
+    'redirect_uri': 'https://e32548fw76.execute-api.us-east-1.amazonaws.com/staging/oauth/google',
+    'me_api': 'https://www.googleapis.com/plus/v1/people/me'
+}
+
+

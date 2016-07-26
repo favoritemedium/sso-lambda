@@ -1,0 +1,10 @@
+all: deploy
+
+pkg:
+	-rm /tmp/lambda_demo.zip
+	cd .venv/lib/python2.7/site-packages && zip -q -r9 /tmp/lambda_demo.zip * && cd -
+	cd oauth && zip -g /tmp/lambda_demo.zip callback.py && zip -g /tmp/lambda_demo.zip conf.py && cd -
+
+deploy: pkg
+	aws lambda update-function-code --function-name <FnName> --zip-file fileb:///tmp/lambda_demo.zip
+
